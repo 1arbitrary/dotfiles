@@ -63,7 +63,7 @@ tiling_drag modifier titlebar
 bindsym Mod4+Return exec wezterm 
 
 # kill focused window
-bindsym Mod4+Shift+q kill
+bindsym Mod4+KP_Delete kill
 
 # A more modern dmenu replacement is rofi:
 
