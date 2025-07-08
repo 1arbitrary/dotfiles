@@ -63,7 +63,7 @@ tiling_drag modifier titlebar
 bindsym Mod4+Return exec wezterm 
 
 # kill focused window
-bindsym Mod4+KP_Delete kill
+bindsym Mod4+Shift+backslash kill
 
 # A more modern dmenu replacement is rofi:
 
@@ -74,10 +74,10 @@ bindsym Mod4+backslash exec rofi -show drun
 # bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym Mod4+$left focus left
-bindsym Mod4+$down focus down
-bindsym Mod4+$up focus up
-bindsym Mod4+$right focus right
+bindsym Mod4+KP_Left focus left
+bindsym Mod4+KP_Down focus down
+bindsym Mod4+KP_Up focus up
+bindsym Mod4+KP_Right focus right
 
 # alternatively, you can use the cursor keys:
 bindsym Mod4+Left focus left
@@ -148,36 +148,21 @@ set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
 
-bindsym Mod4+Mod2+KP_1 workspace number $ws1
-bindsym Mod4+Mod2+KP_2 workspace number $ws2
-bindsym Mod4+Mod2+KP_3 workspace number $ws3
-bindsym Mod4+Mod2+KP_4 workspace number $ws4
-bindsym Mod4+Mod2+KP_5 workspace number $ws5
-bindsym Mod4+Mod2+KP_6 workspace number $ws6
-bindsym Mod4+Mod2+KP_7 workspace number $ws7
-bindsym Mod4+Mod2+KP_8 workspace number $ws8
-bindsym Mod4+Mod2+KP_9 workspace number $ws9
-bindsym Mod4+Mod2+KP_0 workspace number $ws10
+bindsym Mod4+6 workspace number $ws1
+bindsym Mod4+7 workspace number $ws2
+bindsym Mod4+8 workspace number $ws3
+bindsym Mod4+9 workspace number $ws4
+bindsym Mod4+0 workspace number $ws5
 
 # move focused container to workspace
-bindsym Mod4+Shift+KP_End move container to workspace number $ws1
-bindsym Mod4+Shift+KP_Down move container to workspace number $ws2
-bindsym Mod4+Shift+KP_Next move container to workspace number $ws3
-bindsym Mod4+Shift+KP_Left  move container to workspace number $ws4
-bindsym Mod4+Shift+KP_Begin move container to workspace number $ws5
-bindsym Mod4+Shift+KP_Right move container to workspace number $ws6
-bindsym Mod4+Shift+KP_Home move container to workspace number $ws7
-bindsym Mod4+Shift+KP_Up move container to workspace number $ws8
-bindsym Mod4+Shift+KP_Prior move container to workspace number $ws9
-bindsym Mod4+Shift+KP_Insert move container to workspace number $ws10
+bindsym Mod4+Shift+6 move container to workspace number $ws1
+bindsym Mod4+Shift+7 move container to workspace number $ws2
+bindsym Mod4+Shift+8 move container to workspace number $ws3
+bindsym Mod4+Shift+9 move container to workspace number $ws4
+bindsym Mod4+Shift+0 move container to workspace number $ws5
 
 # reload the configuration file
 #bindsym Mod1+Shift+c reload
