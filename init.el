@@ -25,10 +25,6 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-;load catpuccin
-(setq catppuccin-flavor 'frappe)
-(load-theme 'catppuccin :no-confirm)
-
 (use-package ligature
   :config
   (ligature-set-ligatures 'prog-mode '("--" "---" "==" "===" "!=" "!==" "=!="
@@ -45,6 +41,13 @@
 				       ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
 				       "<:<" ";;;"))
   (global-ligature-mode t))
+
+(use-package multiple-cursors
+  :config
+  (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+  (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this))
 
 ; LSP-Mode configuration 
 (use-package lsp-mode
@@ -87,6 +90,8 @@
    ("\\.tsx\\'". web-mode)
    ))
 
+(use-package magit)
+
 (require 'rust-mode)
 
 (custom-set-variables
@@ -94,9 +99,19 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(kanagawa-dragon))
+ '(custom-safe-themes
+   '("c20728f5c0cb50972b50c929b004a7496d3f2e2ded387bf870f89da25793bb44"
+     "d2ab3d4f005a9ad4fb789a8f65606c72f30ce9d281a9e42da55f7f4b9ef5bfc6"
+     "daa27dcbe26a280a9425ee90dc7458d85bd540482b93e9fa94d4f43327128077"
+     "bb8587d7e8ba2a39fcd293498140598188c7bd0c8be0360cca36f08c2b7bf5d9"
+     "fc5c5ec472d1a97e99bf294efdae866827ff78692530038e4df7b6dfe633263d"
+     "28b9703810da2df6fb8667b681cea47d6fbfa5df6a7f23d5dee41d25acca38ba"
+     "922f930fc5aeec220517dbf74af9cd2601d08f8250e4a15c385d509e22629cac"
+     default))
  '(package-selected-packages
-   '(catppuccin-theme company company-box ligature lsp-mode lsp-treemacs
-		      rust-mode)))
+   '(Magit company company-box kanagawa-themes ligature lsp-mode
+	   lsp-treemacs magit multiple-cursors rust-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
