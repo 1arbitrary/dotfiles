@@ -1,0 +1,17 @@
+# Static Keyword
+
+> 'Static' Keyword is used inside classes to define static methods or static properties.
+
+> These belong to the class itself and not to the instances of the class.
+
+> Key points about 'static'
+
+- Belongs to the class and not to the instances created with new.
+
+- Useful for utility functions or constants.
+
+- Not accessible through 'this' in instances 
+
+> Usually, static methods are used to implement functions that belong to the class as a whole, but not to any particular object of it.
+
+> Static methods are also used in database-related classes to search/save/remove entries from the database.

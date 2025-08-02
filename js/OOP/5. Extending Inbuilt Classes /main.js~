@@ -1,0 +1,21 @@
+// Built in classes like Array, map are extendable too.
+class PowerArray extends Array {
+	 static get [Symbol.species]() {
+ 	return Array;
+ }
+	isEmpty() {
+		return this._length === 0;
+	}
+}
+
+// built-in methods would use this as constructor
+
+
+
+let arr = new PowerArray(1, 2, 5, 10, 50);
+console.log(arr.isEmpty());
+
+let filteredArray = arr.filter(item => item >= 10);
+// console.log(filteredArray);
+console.log(filteredArray.isEmpty());
+
