@@ -5,6 +5,15 @@
 (menu-bar-mode -1) ; Disable menu Bar
 (set-fringe-mode 10)
 
+;; Disable backup files (file~)
+(setq make-backup-files nil)
+
+;; Disable auto-save files (#file#)
+(setq auto-save-default nil)
+
+;; Disable lock files (.#file)
+(setq create-lockfiles nil)
+
 (set-frame-font "JetBrainsMono Nerd Font 14" nil t)
 
 					; Turns on displaying numbers 
@@ -87,7 +96,7 @@
   :config
   (yas-global-mode 1)
   (setq yas-snippet-dirs '("~/.config/emacs/elpa/yasnippet-snippets-20250507.2002/snippets/"))
-)
+  )
 
 (use-package web-mode
   :ensure t
