@@ -25,4 +25,5 @@ zstyle ':vcs_info:git:*' formats '%b'
 
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source <(fzf --zsh)
