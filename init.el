@@ -141,9 +141,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(kaolin-shiva))
+ '(custom-enabled-themes '(kaolin-ocean))
  '(custom-safe-themes
-   '("918b39b12c40c780831aac53d3047af862c72f24fe65b18cbdf2cb6fe0d14923"
+   '("a59d0dbcbdfc57a14bc3fa28cb5a8367bc7ede82d848f517b4979b4a03c09da9"
+     "9d5a33a0097c43f44759530c846e1adf9c40171f232a4b2ae561feccc99a03c4"
+     "21eb44ad0e958f71261c436a06577dc114b2850e5a82bc12314cf63c2d2d1db5"
+     "39cb0376bfc26ca69c42b8410cb8e97bc6e72a6da53b4f1268de9bd1b347b9f3"
+     "7ed236688b971b70744d1410d4e86cebde9b2980e0568f38d22db4f319e8d135"
+     "1e6997bc08f0b11a2b5b6253525aed4e1eb314715076a0c0c2486bd97569f18a"
+     "918b39b12c40c780831aac53d3047af862c72f24fe65b18cbdf2cb6fe0d14923"
      "e4a441d3cea911e8ef36de2eaed043cbe2079484c44c3f2bbab67a46f863a9f6"
      "5291b60ee27dfc12078f787929498ce82efe5e4d42decdbb994be80cdb2def1f"
      "c341518f5a80752f3113699a7f845dfc7299667311858e7cdfe64677d359d87e"
@@ -175,7 +181,7 @@
  '(package-selected-packages
    '(Magit company company-box drag-mode drag-stuff eaf flycheck helm-lsp
 	   kaolin-themes ligature lsp-mode lsp-treemacs magit
-	   multiple-cursors rust-mode smartparens yasnippet
+	   multiple-cursors rust-mode smartparens web-mode yasnippet
 	   yasnippet-snippets)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
