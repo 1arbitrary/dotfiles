@@ -1,0 +1,12 @@
+# What is Conditional Rendering ?
+> It's when we want certain elements to show up based on the result of conditions that we have set.
+
+# When would you use && ?
+> `&&` is used when we want to render something if the condition is found to be true or else it returns null.
+
+# When would you use a Ternary ?
+> A ternary can be used when we want to render something based on the outcome, i.e. different renders would be done for if the condition was found
+ to be true or false.
+
+# What if you need to decide between > 2 options on what to display?
+> I'd then simply implement a function and return the value inside the element i want to render.

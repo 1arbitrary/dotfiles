@@ -1,0 +1,27 @@
+# In what way are react functions meant to be pure functions ?
+- Given the same props or state, the component will always return
+  the same content, or UI.
+
+  - Rendering and re-rendering a component will never have any
+    kind of side effect on an outside system.
+
+# What is a "side effect" in React ? What are some examples ?
+- Any code that affects or interacts with an outside system.
+- localStorage, API, Websockets, DOM Manipulations
+  
+# What is not a side effect in React? Give some Examples ?
+- Anything that react is incharge of
+  - Maintaining State, keeping the UI in sync with data,
+    rendering DOM elements.
+
+# When does React run your useEffect function? When does it not run
+# the effect function ?
+
+- As soon as the component renders for the first time.
+  - On every re-render of the component (assuming no dependencies array).
+    - Will NOT re-render if the values of the dependencies array stay same
+      between renders.
+
+# How would you explain what the dependencies array is ?
+- Second parameter to the useEffect function.
+  - A way for react to know whether or not it should re-run the effect function.
