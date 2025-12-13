@@ -3,7 +3,8 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1) ; hides toolbar
 (menu-bar-mode -1) ; Disable menu Bar
-(set-fringe-mode 10)
+(set-fringe-mode 0)
+
 
 ;; Disable backup files (file~)
 (setq make-backup-files nil)
@@ -20,6 +21,11 @@
 (global-display-line-numbers-mode 1)
 					; Sets the number-display-type to relative numbers
 (setq display-line-numbers-type 'relative)
+
+;; Enable ido mode
+
+(require 'ido)
+(ido-mode t)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -69,6 +75,7 @@
 	 (rust-mode . lsp-deferred)
 	 (c-mode . lsp-deferred)
 	 (c++-mode . lsp-deferred)
+	 (python-mode . lsp-deferred)
 	 (css-mode . lsp-deferred)
 	 (web-mode . lsp-deferred)
 	 (tsx-ts-mode . lsp-deferred)
@@ -141,9 +148,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(kaolin-ocean))
+ '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes
-   '("a59d0dbcbdfc57a14bc3fa28cb5a8367bc7ede82d848f517b4979b4a03c09da9"
+   '("01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd"
+     "a59d0dbcbdfc57a14bc3fa28cb5a8367bc7ede82d848f517b4979b4a03c09da9"
      "9d5a33a0097c43f44759530c846e1adf9c40171f232a4b2ae561feccc99a03c4"
      "21eb44ad0e958f71261c436a06577dc114b2850e5a82bc12314cf63c2d2d1db5"
      "39cb0376bfc26ca69c42b8410cb8e97bc6e72a6da53b4f1268de9bd1b347b9f3"
@@ -179,10 +187,10 @@
      "ac7b410453c725606757b5aa46df55be487d53b9fa50b13ea548e9642c32377b"))
  '(org-agenda-files nil)
  '(package-selected-packages
-   '(Magit company company-box drag-mode drag-stuff eaf flycheck helm-lsp
-	   kaolin-themes ligature lsp-mode lsp-treemacs magit
-	   multiple-cursors rust-mode smartparens web-mode yasnippet
-	   yasnippet-snippets)))
+   '(Magit company company-box consult-rg drag-mode drag-stuff eaf
+	   flycheck gruber-darker-theme helm-lsp ligature lsp-mode
+	   lsp-treemacs magit multiple-cursors rust-mode smartparens
+	   web-mode yasnippet yasnippet-snippets)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
