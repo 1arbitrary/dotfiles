@@ -22,11 +22,11 @@ order += "volume master"
 order += "tztime local"
 
 ipv6 {
-	format_up = "Idk?: %ip"
+	format_up = "Gibberish: %ip"
 }
 
 volume master {
-        format = "♪: %volume"
+        format = "Sanity: %volume"
         format_muted = "♪: muted (%volume)"
         device = "default"
         mixer = "Master"
@@ -53,7 +53,7 @@ disk "/" {
 }
 
 memory {
-        format = "Sanity: %used"
+        format = "Peace: %used"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }

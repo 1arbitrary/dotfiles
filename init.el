@@ -1,10 +1,10 @@
 					; Main Emacs configuration
 					; hides scrollbar
+(setq inhibit-startup-screen t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1) ; hides toolbar
 (menu-bar-mode -1) ; Disable menu Bar
 (set-fringe-mode 0)
-
 
 ;; Disable backup files (file~)
 (setq make-backup-files nil)
@@ -15,7 +15,7 @@
 ;; Disable lock files (.#file)
 (setq create-lockfiles nil)
 
-(set-frame-font "JetBrainsMono Nerd Font 14" nil t)
+(set-frame-font "Iosevka Nerd Font 14" nil t)
 
 					; Turns on displaying numbers 
 (global-display-line-numbers-mode 1)
@@ -38,20 +38,15 @@
 (setq use-package-always-ensure t)
 
 (use-package ligature
+  :load-path "path-to-ligature-repo"
   :config
-  (ligature-set-ligatures 'prog-mode '("--" "---" "==" "===" "!=" "!==" "=!="
-				       "=:=" "=/=" "<=" ">=" "&&" "&&&" "&=" "++" "+++" "***" ";;" "!!"
-				       "??" "???" "?:" "?." "?=" "<:" ":<" ":>" ">:" "<:<" "<>" "<<<" ">>>"
-				       "<<" ">>" "||" "-|" "_|_" "|-" "||-" "|=" "||=" "##" "###" "####"
-				       "#{" "#[" "]#" "#(" "#?" "#_" "#_(" "#:" "#!" "#=" "^=" "<$>" "<$"
-				       "$>" "<+>" "<+" "+>" "<*>" "<*" "*>" "</" "</>" "/>" "<!--" "<#--"
-				       "-->" "->" "->>" "<<-" "<-" "<=<" "=<<" "<<=" "<==" "<=>" "<==>"
-				       "==>" "=>" "=>>" ">=>" ">>=" ">>-" ">-" "-<" "-<<" ">->" "<-<" "<-|"
-				       "<=|" "|=>" "|->" "<->" "<~~" "<~" "<~>" "~~" "~~>" "~>" "~-" "-~"
-				       "~@" "[||]" "|]" "[|" "|}" "{|" "[<" ">]" "|>" "<|" "||>" "<||"
-				       "|||>" "<|||" "<|>" "..." ".." ".=" "..<" ".?" "::" ":::" ":=" "::="
-				       ":?" ":?>" "//" "///" "/*" "*/" "/=" "//=" "/==" "@_" "__" "???"
-				       "<:<" ";;;"))
+  ;; Enable all Iosevka ligatures in programming modes
+  (ligature-set-ligatures 'prog-mode '("<---" "<--"  "<<-" "<-" "->" "-->" "--->" "<->" "<-->" "<--->" "<---->" "<!--"
+                                       "<==" "<===" "<=" "=>" "=>>" "==>" "===>" ">=" "<=>" "<==>" "<===>" "<====>" "<!---"
+                                       "<~~" "<~" "~>" "~~>" "::" ":::" "==" "!=" "===" "!=="
+                                       ":=" ":-" ":+" "<*" "<*>" "*>" "<|" "<|>" "|>" "+:" "-:" "=:" "<******>" "++" "+++"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
   (global-ligature-mode t))
 
 (use-package multiple-cursors
@@ -148,49 +143,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(gruber-darker))
+ '(custom-enabled-themes '(cyberpunk))
  '(custom-safe-themes
-   '("01a9797244146bbae39b18ef37e6f2ca5bebded90d9fe3a2f342a9e863aaa4fd"
-     "a59d0dbcbdfc57a14bc3fa28cb5a8367bc7ede82d848f517b4979b4a03c09da9"
-     "9d5a33a0097c43f44759530c846e1adf9c40171f232a4b2ae561feccc99a03c4"
-     "21eb44ad0e958f71261c436a06577dc114b2850e5a82bc12314cf63c2d2d1db5"
-     "39cb0376bfc26ca69c42b8410cb8e97bc6e72a6da53b4f1268de9bd1b347b9f3"
-     "7ed236688b971b70744d1410d4e86cebde9b2980e0568f38d22db4f319e8d135"
-     "1e6997bc08f0b11a2b5b6253525aed4e1eb314715076a0c0c2486bd97569f18a"
-     "918b39b12c40c780831aac53d3047af862c72f24fe65b18cbdf2cb6fe0d14923"
-     "e4a441d3cea911e8ef36de2eaed043cbe2079484c44c3f2bbab67a46f863a9f6"
-     "5291b60ee27dfc12078f787929498ce82efe5e4d42decdbb994be80cdb2def1f"
-     "c341518f5a80752f3113699a7f845dfc7299667311858e7cdfe64677d359d87e"
-     "3538194fff1b928df280dc08f041518a8d51ac3ff704c5e46d1517f5c4d8a0e0"
-     "9df4b113170b630d3c00cf3e67c59ecf4f007487f199cc46d54fb30efc8b79ce"
-     "4e9f0b64032736975e3a5bd5617c829510d5bf55687bf8e7ff90b0721274e032"
-     "5beb9cc517b24959e2ee7be47584270bbe11a7b210807fa419d41ede12174a26"
-     "ca2ce81d33e0b4bd0fdf20caefdde9cb617fec42eeeaf5cd79c80d630bd5cf6a"
-     "70901ffb0f502ec640c30f96a626e66a024af80ebb836eb0cdbe42c06446951b"
-     "5d09ffe65f025fd9f51304aad148140d18ce14411d20b9e563f27581b0305af9"
-     "6a4d13a6d49d70e3e2a590bae8467dbcb65728befb31c388edf43bcc369b51df"
-     "b3c54ff374d12c2e45c621d723a0f6dfb6aab2bb5478a0c4f8b7590adaa23892"
-     "a94e15f0a3fd9e86430b4b8dadffc58faa0310168bcbc4fd3c1b687cf25e1f5d"
-     "59cb0b29e1b279f887d13214bb91c20cce880c3b9647d3e74f66d1b18756c682"
-     "b97004bc28b4d931b589c3453ff83852c28bb009df3421ef0b8b2752e43c67fa"
-     "c78d0e0c0f9231e4c33c2d0f3c24d9f079cde28043a1786aaec301cf3bc5e612"
-     "c90308bb3d9af3fbc9968243e0f620857ce0d4aa064025f9e9388e0b2018c7ce"
-     "71cefc437d0f426cfd6c74b9c6f607c3bf948d9ec2651f41cf2a7d6184bbd383"
-     "62e5ee6ff1f9437e7b9010d4575d0415237dfbee5fd64b2f2b5597969499fec2"
-     "2195cd3eea5daeb44cd309a56419b4a3d56a4bc7d39561f4ed72b7736de2c921"
-     "dfba5753561fb75b8f8c985518676451f64c1bb8af1406a68dbef2eb4f072209"
-     "06cbdce4e48e036d42e4a7080e8a7bc88d48001b03614ce238da5f275a3b6ba1"
-     "d10c58f4a53b7d4760022fdf67734865c290e40ef5dfa597a653e14b810a7d07"
-     "e0df59052e97d35839b4a3a6dcd2173ad41332545c2648ffea558f5363c6b8d1"
-     "dfa1e5afbab42ab2924102e11672a2731c53347ce078b734d9816f1d4429f68a"
-     "d20b3f5c1adf9cf2e2ad40a0f6172b32d53faa0489478cf359d2bdf432b9d8a4"
-     "ac7b410453c725606757b5aa46df55be487d53b9fa50b13ea548e9642c32377b"))
+   '("9fb69436c074b82a62b78b8d733e6274d0bd16d156f7b094e2afe4345c040c49"))
  '(org-agenda-files nil)
  '(package-selected-packages
-   '(Magit company company-box consult-rg drag-mode drag-stuff eaf
-	   flycheck gruber-darker-theme helm-lsp ligature lsp-mode
-	   lsp-treemacs magit multiple-cursors rust-mode smartparens
-	   web-mode yasnippet yasnippet-snippets)))
+   '(Magit company company-box consult-rg cyberpunk-theme drag-mode
+	   drag-stuff eaf flycheck gruber-darker-theme helm-lsp
+	   ligature lsp-mode lsp-treemacs magit multiple-cursors
+	   rust-mode smartparens web-mode yasnippet yasnippet-snippets)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
