@@ -65,7 +65,7 @@ bindsym Mod4+Return exec i3-sensible-terminal
 bindsym Mod4+Shift+backslash kill
 
 # dmenu :
-bindsym Mod4+backslash exec --no-startup-id dmenu_run -nb '#000' -sb '#ccc' -nf '#FF1010' -fn 'Iosevka Nerd Font-14' 
+bindsym Mod4+backslash exec --no-startup-id dmenu_run -nb '#000' -sb '#ccc' -nf '#FFF' -fn 'Iosevka Nerd Font-14' 
 # dmenu wrapper something; check it out someday maybe
 # bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
 
@@ -105,7 +105,7 @@ bindsym Mod4+semicolon fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym Mod4+s layout stacking
 bindsym Mod4+w layout tabbed
-#bindsym Mod1+shift+t layout toggle split
+bindsym Mod1+shift+t layout toggle split
 
 # toggle tiling / floating
 bindsym Mod1+Shift+space floating toggle
@@ -184,6 +184,7 @@ bar {
 	mode hide
         status_command i3status
 	modifier none
+	position top
 }
 
 bindsym Ctrl+Mod1+m bar mode toggle

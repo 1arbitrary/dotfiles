@@ -1,7 +1,3 @@
-# Created by newuser for 5.9
-#
-#
-
 EDITOR='emacs'
 
 HISTFILE=~/.zsh_history
@@ -26,4 +22,13 @@ zstyle ':vcs_info:git:*' formats '%b'
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source <(fzf --zsh)
+source <(sk --shell zsh)
+source ~/key-bindings.zsh
+source ~/completion.zsh 
+
+# bun completions
+[ -s "/home/dot/.bun/_bun" ] && source "/home/dot/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
