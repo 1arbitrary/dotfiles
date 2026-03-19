@@ -1,0 +1,6 @@
+set termguicolors
+colorscheme dot
+
+source ~/.vim/plugins/settings.vim
+source ~/.vim/plugins/plugins.vim
+source ~/.vim/plugins/lsp/lsp.vim
