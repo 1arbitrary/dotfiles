@@ -68,7 +68,7 @@
   :init
   (setq gc-cons-threshold 100000000)
   (setq lsp-auto-configure t)
-  :config (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
+  :config (define-key lsp-mode-map [remap xref-find-apropos] #'consult-lsp-symbols)
   :hook (
          (js-ts-mode . lsp-deferred)
 	 (rust-mode . lsp-deferred)
@@ -86,7 +86,6 @@
   :commands (lsp lsp-deferred))
 
 (use-package lsp-ui :commands lsp-ui-mode)
-(use-package helm-lsp :commands helm-lsp-workspace-symbols)
 (use-package lsp-treemacs
   :init (lsp-treemacs-sync-mode 1)
   :commands lsp-treemacs-errors-list)
