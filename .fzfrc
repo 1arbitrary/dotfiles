@@ -1,0 +1,17 @@
+--height=100%
+--layout=reverse
+--border=none
+--margin=0
+--padding=1
+--info=inline
+--prompt=❯ 
+--pointer=▶
+--marker=✓
+--separator=─
+--scrollbar=│
+
+--color=bg:#1a1b26,bg+:#24283b,fg:#c0caf5,fg+:#c0caf5
+--color=hl:#7aa2f7,hl+:#7dcfff
+--color=info:#7aa2f7,prompt:#7aa2f7,pointer:#bb9af7
+--color=marker:#9ece6a,spinner:#7dcfff,header:#9ece6a
+--color=border:#565f89,label:#c0caf5

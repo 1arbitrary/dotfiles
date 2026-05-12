@@ -1,24 +1,9 @@
-;				       Main Emacs configuration
-					; hides scrollbar
-
-(setq inhibit-startup-screen t)
-(scroll-bar-mode -1)
-(tool-bar-mode -1) ; hides toolbar
-(menu-bar-mode -1) ; Disable menu Bar
-(set-fringe-mode 0)
-
 (fido-vertical-mode 1)
-
-;; Disable backup files (file~)
 (setq make-backup-files nil)
-
-;; Disable auto-save files (#file#)
 (setq auto-save-default nil)
-
-;; Disable lock files (.#file)
 (setq create-lockfiles nil)
 
-(set-frame-font "Iosevka Nerd Font 14" nil t)
+(set-frame-font "IosevkaNerdFont 14" nil t)
 
 					; Turns on displaying numbers 
 (global-display-line-numbers-mode 1)
@@ -37,11 +22,9 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-
 (use-package savehist
   :init
   (savehist-mode))
-
 
 (use-package ligature
   :config
@@ -59,6 +42,8 @@
   (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)) 
 
 (use-package eglot
+  :init
+  (electric-pair-mode t)
   :hook (
  (c-mode . eglot-ensure)
  (c++-mode . eglot-ensure)
@@ -77,10 +62,6 @@
   :config
   (which-key-mode))
 
-(use-package yasnippet
-  :config
-  (yas-global-mode 1))
-
 (use-package go-mode)
 (use-package elixir-ts-mode)
 
@@ -96,12 +77,6 @@
    ("\\.tsx\\'". web-mode)
    ))
 
-(use-package smartparens
-  :ensure smartparens  ;; install the package
-  :hook (prog-mode text-mode markdown-mode) ;; add `smartparens-mode` to these hooks
-  :config
-  ;; load default config
-  (require 'smartparens-config))
 
 (use-package rust-mode
   :ensure t)
@@ -120,17 +95,34 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(modus-vivendi-deuteranopia))
+ '(custom-enabled-themes '(almost-mono-black))
  '(custom-safe-themes
-   '("7d3668feddab2768da5059c7cee3d4f2fa9bcd7524825d182f5991a756893d86"
+   '("cbd85ab34afb47003fa7f814a462c24affb1de81ebf172b78cb4e65186ba59d2"
+     "d0fd069415ef23ccc21ccb0e54d93bdbb996a6cce48ffce7f810826bb243502c"
+     "ffba0482d3548c9494e84c1324d527f73ea4e43fff8dfd0e48faa8fc6d5c2bc7"
+     "8f5b54bf6a36fe1c138219960dd324aad8ab1f62f543bed73ef5ad60956e36ae"
+     "0da9f48243b77c83719c569efd88a7e47c1d8a3f2887838408745d2d52fad8a8"
+     "4e6e3a04936e001ca758dce1bfa5b54fb601683a7361c30d754347a75f321d28"
+     "1b2727001d06f63916118b811da49a9344582c16f9e2d7e26657634712886775"
+     "dc8d63cd0514d058bdf34774163709834519350c1a80dc04deaa58085a8810a5"
+     "6aff83667a3bad8db2f55d69cf595f58b56af233f116ec24d93fe2aa51033eef"
+     "03ffccc093c553a238a54fea13f2056749d83c24e65940f8d4bdb7135f1199a5"
+     "cf0e1f8a027d3a38602ce6628399db5550ad7f0598c01979e01ab45b8a631639"
+     "98f2052cba13ccbf7dc91e6ce4dbc02fc9f6421782c11f8403504222f4d423f7"
+     "1b74dd5576787105a0efcd6e8fed74755bb3fd234aaa5d500e21ddbd56c2661a"
+     "6a95b0faf6cee6adfda34cdfadb2fed6f4157a1d49aabef8cc9b94c187d69a1d"
+     "d2ab3d4f005a9ad4fb789a8f65606c72f30ce9d281a9e42da55f7f4b9ef5bfc6"
+     "c20728f5c0cb50972b50c929b004a7496d3f2e2ded387bf870f89da25793bb44"
+     "daa27dcbe26a280a9425ee90dc7458d85bd540482b93e9fa94d4f43327128077"
      default))
+ '(org-agenda-files '("~/Documents/Data-Structures/Trees/AVL/notes.org"))
  '(package-selected-packages
-   '(eglot go-mode ligature multiple-cursors rust-mode smartparens
-	   web-mode yasnippet)))
+   '(almost-mono-themes closql dash eglot ghub go-mode ligature
+			markdown-mode multiple-cursors posframe
+			rust-mode web-mode with-editor yaml)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(put 'downcase-region 'disabled nil)
