@@ -3,7 +3,7 @@
 (setq auto-save-default nil)
 (setq create-lockfiles nil)
 
-(set-frame-font "IosevkaNerdFont 14" nil t)
+(set-frame-font "Iosevka 14" nil t)
 
 					; Turns on displaying numbers 
 (global-display-line-numbers-mode 1)
@@ -115,7 +115,6 @@
      "c20728f5c0cb50972b50c929b004a7496d3f2e2ded387bf870f89da25793bb44"
      "daa27dcbe26a280a9425ee90dc7458d85bd540482b93e9fa94d4f43327128077"
      default))
- '(org-agenda-files '("~/Documents/Data-Structures/Trees/AVL/notes.org"))
  '(package-selected-packages
    '(almost-mono-themes closql dash eglot ghub go-mode ligature
 			markdown-mode multiple-cursors posframe
