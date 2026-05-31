@@ -1,0 +1,52 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 31,
+
+    "modules-left": [
+        "niri/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "battery",
+	"tray"
+    ],
+
+    "clock": {
+        "format": "{:%I:%H:%p}"
+    },
+
+    "network": {
+        "format-wifi": "󰤨 ",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰤭 "
+    },
+
+    "pulseaudio": {
+        "format": "󰕾 {volume}%"
+    },
+
+    "cpu": {
+        "format": "  {usage}%"
+    },
+
+    "memory": {
+        "format": "󰍛 {percentage}%"
+    },
+
+    "battery": {
+        "format": "󰁹 {capacity}%"
+    },
+
+    "tray" :{
+     "spacing": 7
+    }
+}
