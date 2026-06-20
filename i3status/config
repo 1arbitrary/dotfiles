@@ -15,6 +15,7 @@ order += "battery 1"
 order += "cpu_temperature 0"
 order += "memory"
 order += "load"
+order += "volume master"
 order += "tztime local"
 
 disk "/" {
@@ -49,6 +50,14 @@ memory {
 
 load {
         format = "│   %1min"
+}
+
+volume master {
+        format = "│ ♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
 
 tztime local {
