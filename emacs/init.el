@@ -1,6 +1,5 @@
 ;; -*- lexical-binding: t; -*-
 (fido-vertical-mode 1)
-
 (windmove-default-keybindings)
 (windmove-swap-states-default-keybindings)
 (setq windmove-wrap-around t)
@@ -12,9 +11,7 @@
 (which-key-mode t)
 (set-frame-font "Iosevka Nerd Font Italic 21" nil t)
 
-					; Turns on displaying numbers 
 (global-display-line-numbers-mode 1)
-					; Sets the number-display-type to relative numbers
 (setq display-line-numbers-type 'relative)
 (setq ispell-program-name "/usr/bin/hunspell")
 
@@ -76,9 +73,6 @@
 	 )
   :ensure t)
 
-(use-package doom-themes
-  :ensure t)
-
 (use-package yasnippet
   :config
   (yas-global-mode 1)
@@ -94,19 +88,24 @@
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(doom-tokyo-night))
+ '(custom-enabled-themes '(modus-operandi-tritanopia))
  '(custom-safe-themes
-   '("4594d6b9753691142f02e67b8eb0fda7d12f6cc9f1299a49b819312d6addad1d"
-     "9b9d7a851a8e26f294e778e02c8df25c8a3b15170e6f9fd6965ac5f2544ef2a9"
-     "aec7b55f2a13307a55517fdf08438863d694550565dee23181d2ebd973ebd6b8"
-     "1f292969fc19ba45fbc6542ed54e58ab5ad3dbe41b70d8cb2d1f85c22d07e518"
+   '("8325ce8887001cf97589b3460ee88fd3344a290a815ec248945de6d223b7b01f"
+     "138ed99a323c1b93c52f4b3726caf2bc634b79a76fa63a3d3aff76394db5f28f"
+     "10e330880269244ae45ae9e02fe6f55766da9e15036e7c7f07d7ce228195deb5"
+     "28f3ac0f5fade64dc7e27abe9d32e7d85576c40940977e8e319f25055d3a28b7"
+     "2493d0ad0bb94bd2ad297a6d76288751a532fd6d8d6af694ac14008caa6b7fa2"
+     "967c23e9ba179b80560774419f081df22e7674aac23c5c550b817e4a1ce7d058"
+     "f2b09aa814c194d1e491448f8975c185c14f7d901958dd760b4e667d8daed1d6"
+     "1c725e4aee133f350459e0692f2b885c3444982bf6e8647b05d1cfc519760d9f"
      default))
- '(package-selected-packages '(company doom-themes go-mode ligature rust-mode yasnippet)))
+ '(package-selected-packages '(company dash go-mode ligature rust-mode yasnippet)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

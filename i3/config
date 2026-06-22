@@ -1,12 +1,12 @@
 exec --no-startup-id systemctl --user import-environment DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP
-exec --no-startup-id feh --bg-fill ~/.config/i3/wallpapers/wall.png
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpapers/wall.jpg
 exec --no-startup-id picom
 
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:IosevkaNerdFont Italic 14
+font pango:IosevkaNerdFont Italic 16
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -47,8 +47,12 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+Shift+c kill
 
-# start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id dmenu_run -fn "Iosevka Nerd Font-18" -nb "#000000" -nf "#777777" -sb "#333333" -sf "#ffffff"
+bindsym $mod+p exec --no-startup-id dmenu_run \
+-fn "Iosevka Nerd Font-18" \
+-nb "#faf4ed" \
+-nf "#d7827e" \
+-sb "#907aa9" \
+-sf "#faf4ed"
 
 # change focus
 bindsym $mod+j focus left
@@ -112,13 +116,12 @@ smart_borders on
 default_border pixel 2
 default_floating_border pixel 2
 
-client.focused          #444444 #444444 #f5f5f5 #444444 #444444
-client.focused_inactive #222222 #222222 #aaaaaa #222222 #222222
-client.unfocused        #111111 #111111 #777777 #111111 #111111
-client.urgent           #ff5555 #ff5555 #ffffff #ff5555 #ff5555
-client.placeholder      #111111 #111111 #777777 #111111 #111111
+client.focused          #8db6e8 #8db6e8 #ffffff #8db6e8 #8db6e8
+client.focused_inactive #d8dde8 #d8dde8 #5c6270 #d8dde8 #d8dde8
+client.unfocused        #eef2f7 #eef2f7 #8a90a0 #eef2f7 #eef2f7
+client.urgent           #c86a9d #c86a9d #ffffff #c86a9d #c86a9d
 
-client.background       #000000
+client.background       #f7f8fa
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -188,14 +191,16 @@ bar {
     status_command i3status
     position top
     font pango:Iosevka Nerd Font 14
+
     colors {
-        background #000000
-        statusline #ffffff
-        separator  #444444
-	focused_workspace  #333333 #333333 #ffffff
-        active_workspace   #111111 #111111 #ffffff
-        inactive_workspace #000000 #000000 #777777
-        urgent_workspace   #ff5555 #ff5555 #ffffff
+        background         #fff4f8
+        statusline         #5c5060
+        separator          #d6b7c8
+
+        focused_workspace  #8db6e8 #8db6e8 #ffffff
+        active_workspace   #cfdcf2 #cfdcf2 #5c5060
+        inactive_workspace #fff4f8 #fff4f8 #8a7d85
+        urgent_workspace   #c86a9d #c86a9d #ffffff
     }
 }
 

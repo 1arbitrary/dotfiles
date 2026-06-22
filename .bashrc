@@ -13,7 +13,7 @@ parse_git_branch() {
     [ -n "$branch" ] && printf " (%s)" "$branch"
 }
 
-PS1='\[\e[38;5;245m\][\w]\[\e[0m\]\[\e[38;5;240m\]$(parse_git_branch)\[\e[0m\]\n\[\e[38;5;255m\]  λ\[\e[0m\] '
+PS1='\[\e[38;5;240m\][\w]\[\e[0m\]\[\e[38;5;136m\]$(parse_git_branch)\[\e[0m\]\n\[\e[38;5;241m\]  λ\[\e[0m\] '
 
 export EDITOR="emacs"
 eval "$(fzf --bash)"

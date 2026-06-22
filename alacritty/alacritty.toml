@@ -1,0 +1,27 @@
+[window]
+padding = { x = 8, y = 8 }
+opacity = 0.85
+
+[font]
+size = 16
+
+[font.normal]
+family = "Iosevka Nerd Font"
+style = "Regular"
+
+[cursor]
+style = { shape = "Underline", blinking = "Off" }
+
+[colors.primary]
+background = "#fff8fc"
+foreground = "#4f4452"
+
+[colors.cursor]
+cursor = "#c86a9d"
+text = "#fff8fc"
+
+[selection]
+save_to_clipboard = true
+
+[mouse]
+hide_when_typing = true
