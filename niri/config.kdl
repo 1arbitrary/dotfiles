@@ -7,7 +7,7 @@
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
 
-spawn-at-startup "swaybg" "-i" "/home/dot/Downloads/wallhaven-qrgl87.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/dot/.config/niri/wallhaven-qrgl87.jpg" "-m" "fill"
 
 input {
     keyboard {
@@ -34,15 +34,15 @@ input {
     touchpad {
         // off
         tap
-        // dwt
+        dwt
         // dwtp
         // drag false
         // drag-lock
         natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
-        // scroll-method "two-finger"
-        // disabled-on-external-mouse
+        scroll-method "edge"
+        disabled-on-external-mouse
     }
 
     mouse {
@@ -356,7 +356,7 @@ binds {
 
     Mod+Shift+c repeat=false { close-window; }
 
-    Mod+Left  { focus-column-left; }
+     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
@@ -507,7 +507,7 @@ binds {
     Mod+Ctrl+R { reset-window-height; }
 
     Mod+F { maximize-column; }
-    Mod+semicolon { fullscreen-window; }
+    Mod+Shift+F { fullscreen-window; }
 
     // While maximize-column leaves gaps and borders around the window,
     // maximize-window-to-edges doesn't: the window expands to the edges of the screen.
