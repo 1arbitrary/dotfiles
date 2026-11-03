@@ -1,5 +1,5 @@
 exec --no-startup-id systemctl --user import-environment DISPLAY XAUTHORITY XDG_CURRENT_DESKTOP
-exec --no-startup-id feh --bg-fill ~/.config/i3/wallpapers/wall.jpg
+exec --no-startup-id feh --bg-fill ~/Downloads/wall.png
 exec --no-startup-id picom
 
 set $mod Mod4
@@ -49,16 +49,12 @@ bindsym $mod+Shift+c kill
 
 bindsym $mod+p exec --no-startup-id dmenu_run \
 -fn "Iosevka Nerd Font-18" \
--nb "#faf4ed" \
--nf "#d7827e" \
--sb "#907aa9" \
--sf "#faf4ed"
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -67,10 +63,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -79,7 +75,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+#bindsym $mod+h split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -116,12 +112,6 @@ smart_borders on
 default_border pixel 2
 default_floating_border pixel 2
 
-client.focused          #8db6e8 #8db6e8 #ffffff #8db6e8 #8db6e8
-client.focused_inactive #d8dde8 #d8dde8 #5c6270 #d8dde8 #d8dde8
-client.unfocused        #eef2f7 #eef2f7 #8a90a0 #eef2f7 #eef2f7
-client.urgent           #c86a9d #c86a9d #ffffff #c86a9d #c86a9d
-
-client.background       #f7f8fa
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -191,17 +181,6 @@ bar {
     status_command i3status
     position top
     font pango:Iosevka Nerd Font 14
-
-    colors {
-        background         #fff4f8
-        statusline         #5c5060
-        separator          #d6b7c8
-
-        focused_workspace  #8db6e8 #8db6e8 #ffffff
-        active_workspace   #cfdcf2 #cfdcf2 #5c5060
-        inactive_workspace #fff4f8 #fff4f8 #8a7d85
-        urgent_workspace   #c86a9d #c86a9d #ffffff
-    }
 }
 
 bindsym $mod+b bar mode toggle
